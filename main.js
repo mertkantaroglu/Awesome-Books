@@ -1,16 +1,37 @@
 const bookList = document.querySelector('.bookList');
-const form = document.querySelector('.formInput');
-const [title, author] = document.form.elements;
+const bookTitle = document.querySelector('.book-title');
+const bookAuthor = document.querySelector('.book-author');
+const addButton = document.querySelector('.add-btn');
 
 const bookInput = {}; // empty object
-let books = []; // empty array
 
+// Add Book //
+function addBook() {
+  bookAuthor.addEventListener('change', () => {
+    bookInput.author = bookAuthor.value;
+  })
+  
+  bookTitle.addEventListener('change', () => {
+    bookInput.title = bookTitle.value;
+  })
+}
+
+addButton.addEventListener('click', addBook);
+
+
+function Book(title, author) {
+  this.title = title;
+  this.author = author;
+}
+
+
+// Storage //
 if (localStorage.bookSaved) {
   books = JSON.parse(localStorage.getItem('bookSaved'));
 }
 
 
-
+// Book Display Section //
 const displayBooks = () => {
   bookList.innerHTML = '';
   books.map((book) => {
@@ -39,4 +60,5 @@ const displayBooks = () => {
   });
 };
 
+displayBooks()
 

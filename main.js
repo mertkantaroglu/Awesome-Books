@@ -6,7 +6,14 @@ const bookInput = {}; // empty object
 let books = []; // empty array
 
 // Add Book
-const addBooks = (add) => {
+class Book {
+  constructor(title, author) {
+    this.title = title;
+    this.author = author;
+  }
+}
+
+static addBooks = (add) => {
   books.push(add);
   populateFields();
   displayBooks();
@@ -25,13 +32,15 @@ title.addEventListener('change', () => {
   bookInput.title = title.value;
 });
 
-function Book(title, author) {
-  this.title = title;
-  this.author = author;
-}
-
 const populateFields = () => {
   localStorage.setItem('bookSaved', JSON.stringify(books));
+};
+
+// Remove Book //
+static removeBook(book) {
+  const result = books.filter((b) => b !== book);
+  books = result;
+  populateFields();
 };
 
 // Display Books //
@@ -69,13 +78,6 @@ form.addEventListener('submit', (e) => {
   addBooks(new Book(bookInput.title, bookInput.author));
   form.submit();
 });
-
-// Remove Book //
-function removeBook(book) {
-  const result = books.filter((b) => b !== book);
-  books = result;
-  populateFields();
-}
 
 displayBooks();
 populateFields();

@@ -1,6 +1,5 @@
 body {
   font-family: sans-serif;
-  width: 100%;
   background: rgb(237, 237, 237);
 }
 
@@ -55,9 +54,9 @@ form input {
 }
 
 td {
-display: flex;
-align-items: center;
-margin-left: 15px;
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
 }
 
 .deleteBtn {

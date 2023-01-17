@@ -35,13 +35,13 @@ const Book = class {
     populateFields();
   }
 
-  static addBook = (newBook) => {
+  static addBook(newBook) {
     books.push(newBook);
     populateFields();
     this.displayBooks();
-  };
+  }
 
-  static displayBooks = () => {
+  static displayBooks() {
     listBooks.innerHTML = '';
     books.map((book) => {
       const bookDiv = document.createElement('tr');
@@ -66,7 +66,7 @@ const Book = class {
       });
       return listBooks;
     });
-  };
+  }
 };
 
 form.addEventListener('submit', (e) => {

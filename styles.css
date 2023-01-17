@@ -19,6 +19,7 @@ form li {
   list-style: none;
   align-items: center;
   padding: 10px;
+  display: flex;
 }
 
 form input {
@@ -39,7 +40,7 @@ form input {
 
 .bookList {
   border: solid black;
-  width: 60%;
+  width: 100%;
 }
 
 .bookDiv {
@@ -49,8 +50,8 @@ form input {
   justify-content: space-between;
 }
 
-.bookDiv li:nth-child(odd) {
-  background-color: rgb(202, 202, 202);
+.bookDiv tr:nth-child(odd) {
+  background-color: rgb(135, 135, 135);
 }
 
 td {
@@ -63,4 +64,51 @@ td {
   margin: 5px;
   border: solid black;
   padding: 5px;
+}
+
+navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 90%;
+  gap: 1rem;
+  margin-right: 2%;
+  margin-top: 20px;
+}
+
+.name {
+  margin-right: 60%;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+navbar a {
+  list-style: none;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+
+navbar a:hover {
+  color:blue;
+}
+
+.info-page {
+  width: 60%;
+  text-align: center;
+}
+
+.add-book-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#form {
+  padding-right: 40px;
+}
+
+.contact h1 {
+  text-align: center;
+  font-size: 36px;
 }

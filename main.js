@@ -5,6 +5,7 @@ const [title, author] = form.elements;
 const inputBook = {};
 let books = new Array();
 
+// Storage
 if (localStorage.savedBooks) {
   books = JSON.parse(localStorage.getItem('savedBooks'));
 }
@@ -23,24 +24,28 @@ const populateFields = () => {
   document.querySelector('.book-author').value = '';
 };
 
+// Book Class to add-remove books
 const Book = class {
   constructor(title, author) {
     this.title = title;
     this.author = author;
   }
 
-  static removeBook(book) {
-    const result = books.filter((b) => b !== book);
-    books = result;
-    populateFields();
-  }
-
+  // Add Book
   static addBook(newBook) {
     books.push(newBook);
     populateFields();
     this.displayBooks();
   }
 
+  // Remove Book
+  static removeBook(book) {
+    const result = books.filter((b) => b !== book);
+    books = result;
+    populateFields();
+  }
+
+  // Display Book
   static displayBooks() {
     listBooks.innerHTML = '';
     books.map((book) => {
@@ -69,6 +74,7 @@ const Book = class {
   }
 };
 
+// Form Submit
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   Book.addBook(new Book(inputBook.title, inputBook.author));
@@ -76,3 +82,24 @@ form.addEventListener('submit', (e) => {
 
 Book.displayBooks();
 populateFields();
+
+// Navigation Bar Links
+const contact = document.querySelector('.contact');
+
+contact.addEventListener('click', () => {
+  listBooks.classList.add('hidden');
+  form.classList.add('hidden');
+  contact.classList.remove('hidden');
+})
+
+listBooks.addEventListener('click', () => {
+  contact.classList.add('hidden');
+  form.classList.add('hidden');
+  listBooks.classList.remove('hidden');
+})
+
+form.addEventListener('click', () => {
+  listBooks.classList.add('hidden');
+  contact.classList.add('hidden');
+  form.classList.remove('hidden');
+})

@@ -1,10 +1,10 @@
 <a name="readme-top"></a>
 
-# Capstone Conference Project
+# Awesome Books Project
 
 # 📗 Table of Contents
 
-- [📖 About the Conference Project](#about-project)
+- [📖 About the Awesome Books Project](#about-project)
 - [🛠 Built With](#built-with)
 - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
@@ -21,7 +21,7 @@
 
 # 📖 Conference Project <a name="about-project"></a>
 
-**This is the Capstone Conference Project in order to show what we have learned so far at HTML, CSS and JS.**
+**This is the Awesome Books Project in order to show what we have learned so far at HTML, CSS and JS.**
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -33,15 +33,8 @@
     <li>HTML</li>
     <li>CSS</li>
     <li>JS</li>
-    <li>Flexbox</li>
   </ul>
 </details>
-
-### Key Features <a name="key-features"></a>
-
-They key features for this project are homepage, about page and also mobile menu.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
@@ -51,15 +44,13 @@ They key features for this project are homepage, about page and also mobile menu
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-[Portfolio Presentation Video](https://www.loom.com/share/2168a2ce42fe4a2e944024d53f61f1ce)
-
 ### Prerequisites <a name="prerequisites"></a>
 
 In order to run this project you need a Chrome, Safari or Mozilla browser
 
 ### Setup <a name="setup"></a>
 
-Clone this repository to your desired folder: https://github.com/mertkantaroglu/Capstone-Conference-Project.git
+Clone this repository to your desired folder: https://github.com/mertkantaroglu/Awesome-Books.git
 
 ### Install <a name="install"></a>
 
@@ -99,8 +90,6 @@ To run the project, execute the following command: Click on Live server option i
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-I will create a sign-up page and photos page for the project.
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🤝 Contributing <a name="contributing"></a>
@@ -115,7 +104,7 @@ Contributions, issues, and feature requests are welcome!
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank for Microverse to provide me learning materials, my peers for helping me out to move forward, and also [Cindy Shin](https://www.behance.net/adagio07) for sharing her beautiful design with us.
+I would like to thank for Microverse to provide me learning materials, my peers for helping me out to move forward.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

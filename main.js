@@ -1,83 +1,73 @@
-const bookList = document.querySelector('.bookList');
+const listBooks = document.querySelector('.bookList');
 const form = document.querySelector('.formInput');
 const [title, author] = form.elements;
 
-const bookInput = {}; // empty object
-let books = []; // empty array
+const inputBook = {};
+let books = new Array([]);
 
-// Add Book
-class Book {
+if (localStorage.savedBooks) {
+  books = JSON.parse(localStorage.getItem('savedBooks'));
+}
+
+title.addEventListener('change', () => {
+  inputBook.title = title.value;
+});
+
+author.addEventListener('change', () => {
+  inputBook.author = author.value;
+});
+
+const populateFields = () => {
+  localStorage.setItem('savedBooks', JSON.stringify(books));
+};
+
+const Book = class {
   constructor(title, author) {
     this.title = title;
     this.author = author;
   }
-}
 
-static addBooks = (add) => {
-  books.push(add);
-  populateFields();
-  displayBooks();
-};
+  static removeBook(book) {
+    const result = books.filter((b) => b !== book);
+    books = result;
+    populateFields();
+  }
 
-// Storing Books //
-if (localStorage.bookSaved) {
-  books = JSON.parse(localStorage.getItem('bookSaved'));
-}
+  static addBook = (newBook) => {
+    books.push(newBook);
+    populateFields();
+    this.displayBooks();
+  };
 
-author.addEventListener('change', () => {
-  bookInput.author = author.value;
-});
+  static displayBooks = () => {
+    listBooks.innerHTML = '';
+    books.map((book) => {
+      const bookDiv = document.createElement('tr');
+      const elementBook = document.createElement('td');
+      const deleteBtn = document.createElement('button');
+      deleteBtn.textContent = 'Remove';
 
-title.addEventListener('change', () => {
-  bookInput.title = title.value;
-});
+      elementBook.textContent = `"${book.title}" by ${book.author}`;
 
-const populateFields = () => {
-  localStorage.setItem('bookSaved', JSON.stringify(books));
-};
+      bookDiv.classList.add('container-book');
+      bookDiv.appendChild(elementBook);
+      bookDiv.appendChild(deleteBtn);
 
-// Remove Book //
-static removeBook(book) {
-  const result = books.filter((b) => b !== book);
-  books = result;
-  populateFields();
-};
+      listBooks.appendChild(bookDiv);
 
-// Display Books //
-const displayBooks = () => {
-  bookList.innerHTML = '';
-  books.map((book) => {
-    const divBook = document.createElement('div');
-    const titleBook = document.createElement('p');
-    const authorBook = document.createElement('p');
-    const delButton = document.createElement('button');
-    const hrTag = document.createElement('hr');
-
-    delButton.textContent = 'Remove';
-    titleBook.textContent = book.title;
-    authorBook.textContent = book.author;
-
-    divBook.appendChild(titleBook);
-    divBook.appendChild(authorBook);
-    divBook.appendChild(delButton);
-    divBook.appendChild(hrTag);
-
-    bookList.appendChild(divBook);
-
-    delButton.addEventListener('click', () => {
-      removeBook(book);
-      bookList.removeChild(divBook);
+      deleteBtn.addEventListener('click', () => {
+        this.removeBook(book);
+        listBooks.removeChild(bookDiv);
+      });
+      return listBooks;
     });
-    return bookList;
-  });
+  };
 };
 
-// Submit Form //
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-  addBooks(new Book(bookInput.title, bookInput.author));
-  form.submit();
+  Book.addBook(new Book(inputBook.title, inputBook.author));
 });
 
-displayBooks();
+Book.displayBooks();
 populateFields();

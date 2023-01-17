@@ -1,20 +1,20 @@
 main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 form li {
-    list-style: none;
-    align-items: center;
-    padding: 10px;
+  list-style: none;
+  align-items: center;
+  padding: 10px;
 }
 
 form input {
-    padding: 20px 70px;
+  padding: 20px 70px;
 }
 
 .add-btn {
-    justify-content: center;
+  justify-content: center;
 }

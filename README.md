@@ -89,6 +89,12 @@ To run the project, execute the following command: Click on Live server option i
 - Twitter: [@jossi30](https://twitter.com/jossi30_)
 - LinkedIn: [Yosief G. Hailay](https://www.linkedin.com/in/yosief-g-hailay-290277213/)
 
+### 👤 **Recep Burak Otman**
+
+- GitHub: [@otmanTR](https://github.com/otmanTR)
+- Twitter: [@hotumanzade](https://twitter.com/hotumanzade)
+- LinkedIn: [Burak Otman](linkedin.com/in/burak-otman-88646443)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>

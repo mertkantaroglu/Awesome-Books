@@ -3,7 +3,7 @@ const form = document.querySelector('.formInput');
 const [title, author] = form.elements;
 
 const inputBook = {};
-let books = new Array([]);
+let books = new Array();
 
 if (localStorage.savedBooks) {
   books = JSON.parse(localStorage.getItem('savedBooks'));

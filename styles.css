@@ -1,3 +1,7 @@
+body {
+  font-family: sans-serif;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -17,4 +21,20 @@ form input {
 
 .add-btn {
   justify-content: center;
+}
+
+.bookList {
+  border: solid black;
+  margin:5px;
+}
+
+.bookDiv {
+background-color: rgb(222, 222, 222);
+margin: 10px;
+}
+
+.deleteBtn {
+  margin: 5px 0 5px 150px;
+  border: solid black;
+  
 }

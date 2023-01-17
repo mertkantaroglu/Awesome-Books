@@ -43,8 +43,11 @@ const Book = class {
     listBooks.innerHTML = '';
     books.map((book) => {
       const bookDiv = document.createElement('tr');
+      bookDiv.classList.add("bookDiv");
       const elementBook = document.createElement('td');
+      elementBook.classList.add("elementBook");
       const deleteBtn = document.createElement('button');
+      deleteBtn.classList.add("deleteBtn");
       deleteBtn.textContent = 'Remove';
 
       elementBook.textContent = `"${book.title}" by ${book.author}`;

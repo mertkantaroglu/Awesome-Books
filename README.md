@@ -19,7 +19,7 @@
 - [❓ FAQ](#faq)
 - [📝 License](#license)
 
-# 📖 Conference Project <a name="about-project"></a>
+# 📖 Awesome Books Project <a name="about-project"></a>
 
 **This is the Awesome Books Project in order to show what we have learned so far at HTML, CSS and JS.**
 
@@ -38,11 +38,13 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-[Live Demo](https://mertkantaroglu.github.io/)
+Coming Soon!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 💻 Getting Started <a name="getting-started"></a>
+
+Portfolio presentation will be coming soon.
 
 ### Prerequisites <a name="prerequisites"></a>
 
@@ -59,12 +61,6 @@ Install this project with Bash command
 ### Usage <a name="usage"></a>
 
 To run the project, execute the following command: Click on Live server option in your IDE
-
-### Run tests
-
-### Deployment
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 👥 Authors <a name="authors"></a>
 
@@ -90,15 +86,13 @@ To run the project, execute the following command: Click on Live server option i
 
 ## 🔭 Future Features <a name="future-features"></a>
 
+For the future features we will add sign up page and also favorite button to the project.
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## ⭐️ Show your support <a name="show-your-support"></a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -114,6 +108,6 @@ I would like to thank for Microverse to provide me learning materials, my peers 
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://choosealicense.com/licenses/mit/) licensed.
+This project is [MIT](LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

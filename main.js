@@ -1,37 +1,37 @@
 const bookList = document.querySelector('.bookList');
-const bookTitle = document.querySelector('.book-title');
-const bookAuthor = document.querySelector('.book-author');
-const addButton = document.querySelector('.add-btn');
+const form = document.querySelector('.formInput');
+const [title, author] = form.elements;
 
 const bookInput = {}; // empty object
+let books = []; // empty array
 
-// Add Book //
-function addBook() {
-  bookAuthor.addEventListener('change', () => {
-    bookInput.author = bookAuthor.value;
-  })
-  
-  bookTitle.addEventListener('change', () => {
-    bookInput.title = bookTitle.value;
-  })
+if (localStorage.bookSaved) {
+  books = JSON.parse(localStorage.getItem('bookSaved'));
 }
 
-addButton.addEventListener('click', addBook);
+author.addEventListener('change', () => {
+  bookInput.author = author.value;
+});
 
+title.addEventListener('change', () => {
+  bookInput.title = title.value;
+});
 
 function Book(title, author) {
   this.title = title;
   this.author = author;
 }
 
+const populateFields = () => {
+  localStorage.setItem('bookSaved', JSON.stringify(books));
+};
 
-// Storage //
-if (localStorage.bookSaved) {
-  books = JSON.parse(localStorage.getItem('bookSaved'));
+function removeBook(book) {
+  const result = books.filter((b) => b !== book);
+  books = result;
+  populateFields();
 }
 
-
-// Book Display Section //
 const displayBooks = () => {
   bookList.innerHTML = '';
   books.map((book) => {
@@ -60,5 +60,17 @@ const displayBooks = () => {
   });
 };
 
-displayBooks()
+const addBooks = (add) => {
+  books.push(add);
+  populateFields();
+  displayBooks();
+};
 
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  addBooks(new Book(bookInput.title, bookInput.author));
+  form.submit();
+});
+
+displayBooks();
+populateFields();

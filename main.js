@@ -19,6 +19,8 @@ author.addEventListener('change', () => {
 
 const populateFields = () => {
   localStorage.setItem('savedBooks', JSON.stringify(books));
+  document.querySelector('.book-title').value = '';
+  document.querySelector('.book-author').value = '';
 };
 
 const Book = class {

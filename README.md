@@ -45,7 +45,7 @@ They key features for this project are homepage, about page and also mobile menu
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-[Live Demo](https://mertkantaroglu.github.io/Capstone-Conference-Project/)
+[Live Demo](https://mertkantaroglu.github.io/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -82,6 +82,12 @@ To run the project, execute the following command: Click on Live server option i
 - GitHub: [@mertkantaroglu](https://github.com/mertkantaroglu/)
 - Twitter: [@aranelluinwe](https://twitter.com/aranelluinwe)
 - LinkedIn: [mertkantaroglu](https://www.linkedin.com/in/mert-kantaroglu/)
+
+### 👤 **Yosief G. Hailay**
+
+- GitHub: [@jossi30](https://github.com/jossi30)
+- Twitter: [@jossi30](https://twitter.com/jossi30_)
+- LinkedIn: [Yosief G. Hailay](https://www.linkedin.com/in/yosief-g-hailay-290277213/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

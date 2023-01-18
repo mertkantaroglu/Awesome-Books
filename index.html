@@ -10,17 +10,17 @@
   <body>
     <main>
       <navbar class="navbar">
-        <a href="index.html" class="name"> <div >Awesome Books</div></a>
-          <div><a href="list.html">List</a></div>
-          <div><a href="add.html">Add New</a></div>
-          <div><a href="contact.html">Contact</a></div>
+      <a> <div class="navAwesome" >Awesome Books</div></a>
+       <a href="#info-page"><div class="navList">List</div></a>
+        <a href="#add-book-page"><div class="navAdd">Add New</div></a>
+        <a href="#contact"> <div class="navContact">Contact</div></a>
         </div>
       </navbar>
-      <div class="info-page">
+      <div class="info-page" id="info-page">
         <h1>All awesome books</h1>
         <div class="bookList" id="list"></div>
       </div>  
-      <div class="add-book-page">
+      <div class="add-book-page" id="add-book-page">
         <h2>Add a new book</h2>
         <form class="formInput hidden" id="form">
           <ul>
@@ -48,7 +48,7 @@
           </ul>
         </form>
       </div>
-      <section class="contact hidden" id="contact">
+      <section class="contact" id="contact">
         <h1>Contact Information</h1>
         <p>Do have any questions or you just want to say "Hello"? You can reach out
       to us!</p>

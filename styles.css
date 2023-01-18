@@ -112,3 +112,16 @@ navbar a:hover {
   text-align: center;
   font-size: 36px;
 }
+
+.show {
+  display: absolute;
+}
+
+.close {
+  display: none;
+}
+
+.navAwesome {
+  display: flex;
+  margin-right: 800px;
+}

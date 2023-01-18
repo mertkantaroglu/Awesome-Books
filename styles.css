@@ -113,10 +113,6 @@ navbar a:hover {
   font-size: 36px;
 }
 
-.show {
-  display: absolute;
-}
-
 .close {
   display: none;
 }

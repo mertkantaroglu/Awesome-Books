@@ -82,24 +82,3 @@ form.addEventListener('submit', (e) => {
 
 Book.displayBooks();
 populateFields();
-
-// Navigation Bar Links
-const contact = document.querySelector('.contact');
-
-contact.addEventListener('click', () => {
-  listBooks.classList.add('hidden');
-  form.classList.add('hidden');
-  contact.classList.remove('hidden');
-})
-
-listBooks.addEventListener('click', () => {
-  contact.classList.add('hidden');
-  form.classList.add('hidden');
-  listBooks.classList.remove('hidden');
-})
-
-form.addEventListener('click', () => {
-  listBooks.classList.add('hidden');
-  contact.classList.add('hidden');
-  form.classList.remove('hidden');
-})

@@ -9,36 +9,65 @@
   </head>
   <body>
     <main>
-      <h1>All Awesome Books</h1>
-
-      <div class="bookList"></div>
-
-      <h2>Awesome Books</h2>
-      <form class="formInput">
+      <navbar class="navbar">
+        <div class="navAwesome">Awesome Books</div>
+        <a href="#info-page"><div class="navList">List</div></a>
+        <a href="#add-book-page"><div class="navAdd">Add New</div></a>
+        <a href="#contact"><div class="navContact">Contact</div></a>
+      </navbar>
+      <div class="info-page" id="info-page">
+        <h1>All Awesome Books</h1>
+        <div class="bookList" id="list"></div>
+      </div>
+      <div class="add-book-page" id="add-book-page">
+        <h2>Add a new book</h2>
+        <form class="formInput hidden" id="form">
+          <ul>
+            <li>
+              <input
+                class="book-title"
+                type="text"
+                name="title"
+                placeholder="Title"
+                required
+              />
+            </li>
+            <li>
+              <input
+                class="book-author"
+                type="text"
+                name="author"
+                placeholder="Author"
+                required
+              />
+            </li>
+            <li>
+              <button class="add-btn" type="submit">Add</button>
+            </li>
+          </ul>
+        </form>
+      </div>
+      <section class="contact" id="contact">
+        <h1>Contact Information</h1>
+        <p>
+          Do have any questions or you just want to say "Hello"? You can reach
+          out to us!
+        </p>
         <ul>
-          <li>
-            <input
-              class="book-title"
-              type="text"
-              name="title"
-              placeholder="Title"
-              required
-            />
-          </li>
-          <li>
-            <input
-              class="book-author"
-              type="text"
-              name="author"
-              placeholder="Author"
-              required
-            />
-          </li>
-          <li>
-            <button class="add-btn" type="submit">Add</button>
-          </li>
+          <li>Our e-mail: awesomebooks@gmail.com</li>
+          <li>Our phone number: 0043 123 567 8910</li>
+          <li>Our address: Streetname 288, SF, CA</li>
         </ul>
-      </form>
+      </section>
+      <footer>
+        <hr />
+        <p>
+          Copyright @ 2023 |
+          <a href="https://github.com/mertkantaroglu">Mert</a> |
+          <a href="https://github.com/jossi30">Yosief</a> |
+          <a href="https://github.com/otmanTR">Burak</a>
+        </p>
+      </footer>
     </main>
     <script src="main.js"></script>
   </body>

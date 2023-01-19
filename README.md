@@ -27,6 +27,14 @@
 
 ### Tech Stack <a name="tech-stack"></a>
 
+### Key Features <a name="key-features"></a>
+
+
+- **made with use of github workflow**
+- **made with use of linter checkers**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <details>
   <summary>Client</summary>
   <ul>
